@@ -1,0 +1,41 @@
+@import "./media";
+
+
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 220px;
+  box-sizing: border-box;
+
+ @media screen and(max-width: $xl){
+  	padding: 0 60px;
+
+  }
+  @media screen and(max-width: $sm){
+  	padding: 0 20px;
+
+  }
+}
+
+
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
