@@ -56,17 +56,23 @@
 // 	   if (step===0){
 // 	   console.log(1);
 // 	} 
-// 	for(i=1; i<=step; i++){
-// 	  sum *= number;
+// else if (step>0) {
+//     for (i=0; i<=step; i++) {
+//        sum*=number;
+//      }
+//   } 
+// else {
+//     for ( i=0; i<=(-step); i++)
+//       sum*=(1/number);
+//      }
+//         console.log(sum);
+//  }
 
-// 	if(step<0){
-// 	  sum *=(1/number);    
-// 	 }
 
-// 	   console.log(sum);
-// 	}
 
-// }
+
+
+
 
 /homework#2(4)/
 (function (){

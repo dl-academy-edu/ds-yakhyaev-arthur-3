@@ -92,18 +92,19 @@
 
 
 (function (){
-    let rand=Math.floor(1+Math.random()*10);
+    let rand = Math.floor(1+Math.random()*10);
     let number;
     console.log(rand);
     while (true) {
-        number=+(prompt('Угадайте число'));
-        if ((typeof(number)!='number') || (isNaN(number)) || (true!=isFinite(number))) {
-                alert ('Ввведено некорректное число,  попробуйте еще раз');
+        number = +(prompt("Угадайте число"));
+        if (isNaN(number)) {
+             alert("Ошибка!!! Введено некорректное число.");
+            
             }else if (rand!=number) {
-                alert('Не угадали! Попробуйте еще раз.');
+                alert("Не угадали! Попробуйте еще раз.");
             }
             else {
-                alert ('Поздравляю вы угадали!')
+                alert ("Поздравляю вы угадали.");
                 break
             }
     }
