@@ -1,30 +1,182 @@
-<header class="header">
-  <div class="container">
+<header class="@@class container">
 	<nav class="header__wrapper">
 
     	<span class="header__title">
-            <a class="header__title-link"href="/">Home</a>
+            <a class="@@class__home-link hover-color" href="/">Home</a>
      	</span>
 
-    	<ul class="header__item">
-    		<li class="header__item-blok">
-    			<a class="header__item-link" href="/">My blog</a>
-    		</li>
+  	<ul class="header__item">
+  		<li >
+  			<a class="@@class__blog-link" href="/pages/my-blog/index.html">My blog</a>
+  		</li>
 
-    		<li class="header__item-blok">
-    			<a class="header__item-link" href="/pages/catalog">Sign in</a>
-    		</li>
+  		<li >
+  			<button class="@@class__sign-nav header__item-nav  header__item-sign-js">Sign in</button>
+  		</li>
 
-    		<li class="header__item-blok">
-    			<a class="header__item-link" href="/pages/toys">Register</a>
-    		</li>
-     
-    	</ul>
+  		<li >
+  			<button class="@@class__regis-nav header__item-nav  header__item-regis-js">Register</button>
+  		</li>
+
+      <li >
+        <a class="@@class__profile-link " href="/pages/my-profile/index.html">My profile</a>
+      </li>
+   
+  	</ul>
 	</nav>
-    
+
+
+
+    <button class="header__menu-mobile  header__menu-mobile-js">
+      <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect y="6.10352e-05" width="32" height="4" rx="2" fill="#070707"/>
+      <rect y="8.00006" width="32" height="4" rx="2" fill="#070707"/>
+      <rect y="16.0001" width="32" height="4" rx="2" fill="#070707"/>
+      </svg>
+    </button>
+
+
+
+<div class="mobile__header ">
+  <div class="mobile__header-inner">
+
+    <button class="mobile__header__button-close   mobile__header__button-close-js">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3.37256" width="32" height="4" rx="2" transform="rotate(45 3.37256 0)" fill="#070707"/>
+      <rect x="0.543945" y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0.543945 22.6289)" fill="#070707"/>
+      </svg>
+    </button>
+
+    <ul class="mobile__header__nav-list list__none">
+      <li class="mobile__header__item-blog">
+        <a class="@@class__home-link-mobile" href="/">Home</a>
+      </li>
+
+      <li class="mobile__header__item-blog">
+        <a class="@@class__blog-link-mobile" href="/">My blog</a>
+      </li>
+
+      <li class="mobile__header__item-blog">
+        <button class="@@class__sign-button-mobile mobile__header__nav-item mobile__header-sign-in mobile__header-sign-in-js header__hover">Sign in</button>
+      </li>
+
+      <li class="mobile__header__item-blog">
+        <button class="@@class__regis-button-mobile mobile__header__nav-item mobile__header-register mobile__header-register-js header__hover">Register</button>
+      </li>
+
+      <li class="mobile__header__item-blog">
+        <a class="@@class__profile-link-mobile" href="/pages/my-profile/index.html">My profile</a>
+      </li>
+    </ul>
+
   </div>
-  
+
+</div>
+
 </header>
+
+
+
+<!-- Sign in modal -->
+<div class="sign__modal sign__modal-js sign__modal-hedden">
+    
+    <form  class="sign">
+        <div class="sign__row">
+          <label for="form__email" class="sign__label">Email *</label>
+          <input type="email" class="sign__input sign__input-js" id="form__email" name="email">
+        </div>
+
+        <div class="sign__row">
+          <label  class="sign__label"> Password *</label>
+          <input type="text" class="sign__input sign__input-js" id="form__pasword" name="pasword">
+        </div>
+
+          @@include('button/index.html', {
+          "class": "sign__button",
+          "class-text":"sign__button-text",
+          "text": "Log in"
+          })
+     
+       <button class="sign__close sign__close-js" aria-label="Button close" type="button" >
+          <svg  width="26" height="26" viewBox="0 0 26 26"  xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.82861" width="32" height="4" rx="2"  transform="rotate(45 2.82861 0)" />
+          <rect y="22.6289" width="32" height="4" rx="2"  transform="rotate(-45 0 22.6289)" />
+          </svg>
+      </button>
+    </form>
+
+</div>
+
+<!-- Register modal -->
+<div class="regis__modal regis__modal-js regis__modal-hedden">
+  <form class="regis">
+
+    <div class="regis__long-row">
+      <label for="form-email" class="regis__label">Email *</label>
+      <input type="Email" class="regis__input regis__input-js" id="form-email" name="Email">
+    </div>
+
+    <div class="regis__long-row">
+      <div class="regis__little-row">
+        <label for="form-name" class="regis__label regis__label-little">Name *</label>
+        <input type="text" class="regis__input" id="form-name" name="Name">
+      </div>
+
+      <div class="regis__little-row  regis__little-row-second">
+        <label for="form-surname" class="regis__label regis__label-little">Surname *</label>
+        <input type="text" class="regis__input" id="form-surname" name="surname">
+      </div>
+    </div>   
+
+    <div class="regis__long-row">
+      <div class="regis__little-row">
+        <label for="form-password" class="regis__label regis__label-little">Password *</label>
+        <input type="password" class="regis__input" id="form-password" name="password">
+      </div>
+
+      <div class="regis__little-row ">
+        <label for="form-repeat" class="regis__label regis__label-little">Repeat password *</label>
+        <input type="text" class="regis__input" id="form-repeat" name="repeat">
+      </div>  
+    </div>
+
+    <div class="regis__long-row">
+      <div class="regis__little-row">
+        <label for="form-location" class="regis__label regis__label-little">Location *</label>
+        <input type="text" class="regis__input " id="form-location" name="location">
+      </div>
+
+      <div class="regis__little-row ">
+        <label for="form-age" class="regis__label regis__label-little">Age *</label>
+        <input type="number" class="regis__input" id="form-age" name="age">
+      </div>  
+    </div> 
+
+    <div class="regis__long-row">
+      <label class="regis__label-chekbox">
+        <input class="regis__input-chekbox" type="checkbox" name="accept" disabled>
+        Clicking on the button, you consent to the processing of your personal data.
+      </label>
+    </div>   
+
+       @@include('button/index.html', {
+           "text": "Sign up"
+          })
+
+       <button class="regis__close regis__close-js" aria-label="Button close" type="button" >
+          <svg  width="26" height="26" viewBox="0 0 26 26"  xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.82861" width="32" height="4" rx="2"  transform="rotate(45 2.82861 0)" />
+          <rect y="22.6289" width="32" height="4" rx="2"  transform="rotate(-45 0 22.6289)" />
+          </svg>
+      </button>
+
+  </form>
+
+</div>
+
+
+
+
 
 
 

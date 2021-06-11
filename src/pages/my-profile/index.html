@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="/static/fonts/gilroy.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico" />
-    <title>Profile</title>
+    <title>My profile</title>
   </head>
   <body>
-    @@include('header/index.html')
+    
+    @@include('header/index.html', {
+          "class": "header header_2",
+          "class__home-link": "header__title-link",
+          "class__blog-link": "header__item-link",
+          "class__sign-nav": "header__item-nav hidden",
+          "class__regis-nav": "header__item-nav hidden",
+          "class__profile-link": "header__item-link",
+          "class__home-link-mobile": "mobile__header__nav-item mobile__header__nav-item-active",
+          "class__sign-button-mobile": "mobile__header__nav-item hidden",
+          "class__regis-button-mobile": "mobile__header__nav-item hidden",
+          "class__blog-link-mobile": "mobile__header__nav-item header__hover",
+          "class__profile-link-mobile": "mobile__header__nav-item  header__hover",
+        })
     <main class="toys-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Игрушки</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на странице игрушек
-        </h2>
-      </div>
+      @@include('profile/index.html')
+
     </main>
-    @@include('footer/index.html')
-    <script src="index.js"></script>
+    
+    <script src="profile.js"></script>
   </body>
 </html>

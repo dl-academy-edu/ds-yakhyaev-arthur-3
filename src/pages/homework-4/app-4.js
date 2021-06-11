@@ -75,7 +75,7 @@ function getInformation(){
         let author = item.name;
         let workAuthor = item.work;
         
-        dateIndex = data.findIndex(item => item.developerIndex===index)
+        dateIndex = data.findIndex(item => item.developerIndex===index);
         
         let nameLg = data[dateIndex].name;
         let startYear = data[dateIndex].year;

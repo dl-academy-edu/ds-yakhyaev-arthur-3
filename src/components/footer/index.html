@@ -5,7 +5,7 @@
 
     <h3 class="footer__title">Contacts</h3>
       <p class="footer__text">Want to know more or just chat? You are welcome!</p>
-         <button class="footer__message">Send message</button>
+         <button class="footer__message footer__message-js">Send message</button>
 
     <ul class="footer__social">
     	
@@ -41,3 +41,64 @@
    </div>
   </div>
 </footer>
+
+
+<!-- Send message modal -->
+<div class="message__modal message__modal-js message__modal-hedden">
+    <form class="message">
+
+        <div class="message__row">
+            <div class="message__row-short">
+                <label for="form__name" class="message__label">What is your name? *</label>
+                <input type="text" class="message__input message__input-js" id="form__name" name="name">
+            </div>
+
+            <div class="message__row-short">
+                <label for="form__message" class="message__label">Message subject *</label>
+                <input type="text" class="message__input " id="form__message" name="message">
+            </div>
+        </div>
+
+        <div class="message__row">
+            <div class="message__row-short">
+                <label  class="message__label">Your Email *</label>
+                <input type="email" class="message__input " id="form-email-2" name="form-email">
+            </div>
+
+            <div class="message__row-short">
+                <label  class="message__label">Your mobile phone *</label>
+                <input type="text" class="message__input " id="form__phone" name="phone">
+            </div>
+        </div>
+
+        <div class="message__row">
+            <label  class="message__label">What do you want to discuss with me?</label>
+            <textarea class="message__input   message__input-textarea"  name="message__text" id="form__discuss" ></textarea> 
+        </div>
+
+        <div class="message__row">
+            <label class="message__label-chekbox">
+            <input class="message__input-chekbox" type="checkbox" name="accept" disabled>
+             Clicking on the button, you consent to the processing of your personal data.
+            </label>
+        </div>   
+
+        @@include('button/index.html', {
+           "text": "Send"
+           })
+
+      <button class="message__close message__close-js" aria-label="Button close" type="button" >
+          <svg  width="26" height="26" viewBox="0 0 26 26"  xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.82861" width="32" height="4" rx="2"  transform="rotate(45 2.82861 0)" />
+          <rect y="22.6289" width="32" height="4" rx="2"  transform="rotate(-45 0 22.6289)" />
+          </svg>
+      </button>
+
+    </form>
+
+
+
+
+</div>
+
+

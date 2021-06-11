@@ -268,11 +268,28 @@
   }
 
 
+ }
+
 }
 
+.button__top{
+  position: fixed;
+  right: 100px;
+  bottom: 200px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2.5px solid #000;
+  visibility: inherit;
+  background-color:#fff;
+  transition: 0.2s;
+  box-shadow: 0 0 0 1px;
 
+  &-hedden{
+    visibility: hidden;
+  }
 }
-
 
 
 
