@@ -1,0 +1,160 @@
+        
+
+
+<section class="main">
+        <div class="container">
+          <h1 class="main__title">My blog</h1>
+               <form action="https://echo.htmlacademy.ru" method="POST" class="form">
+
+               <div class="form__wrapper">
+
+      				       <fieldset class="form__tag form__fieldset">
+      					      <legend class="form__legend">Tags</legend>
+
+                      <ul class="form__list form__list-tags">
+
+                            <li class="form__item  form__item-tag">
+                              <input type="checkbox" class="form__checkbox-input" id="tag-1" name="tags" checked>
+                              <label  for="tag-1" class="form__checkbox-label form__checkbox-label_1"></label>
+                            </li>
+
+                            <li class="form__item  form__item-tag">
+                              <input type="checkbox" class="form__checkbox-input" id="tag-2" name="tags">
+                              <label  for="tag-2" class="form__checkbox-label form__checkbox-label_2"> </label>
+                            </li>
+
+                            <li class="form__item  form__item-tag">
+                              <input type="checkbox" class="form__checkbox-input" id="tag-3" name="tags">
+                              <label  for="tag-3" class="form__checkbox-label form__checkbox-label_3"></label>
+                            </li>
+
+                            <li class="form__item  form__item-tag">
+                              <input type="checkbox" class="form__checkbox-input" id="tag-4" name="tags">
+                              <label  for="tag-4" class="form__checkbox-label form__checkbox-label_4"></label>
+                            </li>
+
+                            <li class="form__item  form__item-tag">
+                              <input type="checkbox" class="form__checkbox-input" id="tag-5" name="tags">
+                              <label  for="tag-5" class="form__checkbox-label form__checkbox-label_5"></label>
+                            </li>
+
+                            <li class="form__item  form__item-tag">
+                              <input type="checkbox" class="form__checkbox-input" id="tag-6" name="tags" checked>
+                              <label  for="tag-6" class="form__checkbox-label form__checkbox-label_6"></label>
+                            </li>
+
+                            <li class="form__item  form__item-tag">
+                              <input type="checkbox" class="form__checkbox-input" id="tag-7" name="tags">
+                              <label  for="tag-7" class="form__checkbox-label form__checkbox-label_7"></label>
+                            </li>
+
+                            <li class="form__item  form__item-tag">
+                              <input type="checkbox" class="form__checkbox-input" id="tag-8" name="tags">
+                              <label  for="tag-8" class="form__checkbox-label form__checkbox-label_8"></label>
+                            </li>
+                      </ul>
+                     </fieldset>
+
+      				       <fieldset class="form__views form__fieldset">
+      					        <legend class="form__legend">Views</legend>
+
+                            <ul class="form__list">
+
+                              <li class="form__item">
+                                <input type="radio" class="form__radio-input" value="100-500" name="views" >
+                                <label class="form__radio-label">100-500</label>
+                                
+                              </li>
+
+                              <li class="form__item">
+                                <input type="radio" class="form__radio-input" value="500-1000" name="views" checked>
+                                <label class="form__radio-label">500-1000 </label>
+                              </li>
+
+                              <li class="form__item">
+                                <input type="radio" class="form__radio-input" value="1000-2000" name="views">
+                                <label class="form__radio-label">1000-2000</label>
+                              </li>
+
+                            </ul>
+                      </fieldset>
+
+                      <fieldset class="form__comments form__fieldset">
+      	               	<legend class="form__legend">Comments</legend>
+
+      	               	  <ul class="form__list ">
+
+                           <li class="form__item "> 
+                             <input type="checkbox" class="form__checkbox-input" value="0-0" name="comments" checked>
+                             <label  class="form__label-checkbox">0</label>
+                           </li>
+
+                            <li class="form__item ">
+                              <input type="checkbox" class="form__checkbox-input" value="0-1" name="comments">
+                              <label  class="form__label-checkbox">0-1</label>
+                           </li>
+
+                            <li class="form__item ">
+                              <input type="checkbox" class="form__checkbox-input" value="1-50" name="comments">
+                              <label  class="form__label-checkbox">1-50</label>
+                           </li> 
+                          </ul>
+      	                     
+                       </fieldset>
+
+                     	 <fieldset class="form__how-show form__fieldset">
+      					          <legend class="form__legend">How show?</legend>
+                        <ul class="form__list">
+                           <li class="form__item ">
+                              <input type="radio" class="form__radio-input" value="show 5" name="how-show" checked>
+                              <label class="form__radio-label">show 5</label>
+                           </li>
+
+                           <li class="form__item ">
+                              <input type="radio" class="form__radio-input" value="show 10" name="how-show">
+                              <label class="form__radio-label">show 10</label>
+                           </li>
+                       </ul>
+                      </fieldset>
+
+
+                      <fieldset class="form__sort-by form__fieldset">
+      					         <legend class="form__legend">Sort by</legend>
+                           <ul class="form__list">
+                              <li class="form__item">
+                                <input type="radio" class="form__radio-input" value="date" name="sotrBy" checked>
+                                <label class="form__radio-label">date</label>
+                              </li>
+
+                              <li class="form__item">
+                                <input type="radio" class="form__radio-input" value="title" name="sotrBy">
+                                <label class="form__radio-label">title</label>
+                              </li>
+
+                              <li class="form__item">
+                                <input type="radio" class="form__radio-input" value="views" name="sotrBy">
+                                <label class="form__radio-label">views</label>
+                              </li>
+                           </ul>
+                       </fieldset>
+
+                       @@include('button/index.html', {
+          		            "type": "reset",
+          		            "class": "form__reset-button ",
+          		            "text": "Reset"
+          		            })
+
+                </div>
+
+		            <div class="form__search">
+		            	   <input type="text" class="form__search-input" aria-label="Search by word" id="form-search" name="search">
+		            	
+                        @@include('button/index.html', { 
+        		              "type": "submit",
+        		              "class": "form__form-button",
+        		              "text": "Search"
+        		            })
+                </div>
+        </form>
+        </div>
+        </section>

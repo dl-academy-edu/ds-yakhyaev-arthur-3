@@ -34,8 +34,29 @@ body {
   }
 }
 
+.list__none{
+  list-style: none;
+}
+.hidden{
+  display: none;
+  margin-right:0;
+}
+
+.hover-color{
+  color:#828282;
+    text-decoration:none;
+    transition: color .5s ease .2s;
+    &:hover{
+      color:#000;
+    }
+}
+
 
 
 // Подключение компонентов
+@import "./form/form";
+@import "./blog/blog";
+@import "./profile/profile";
+@import "./button/button";
 @import "./header/header";
 @import "./footer/footer";

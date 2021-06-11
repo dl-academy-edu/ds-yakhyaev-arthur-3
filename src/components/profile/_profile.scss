@@ -1,0 +1,64 @@
+@import "../media.scss";
+.profile{
+
+&__wrapper{
+	display: flex;
+}
+&__inner{
+	display:flex;
+	flex-flow: column;
+}
+
+&__foto{
+	background: #F6F6F6;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+
+}
+
+&__data{
+	position: relative;
+    top: 37px;
+	display: flex;
+	flex-flow: column;
+	margin: auto 105px;
+	
+&-list{
+    list-style: none;
+    padding: 0;
+	}
+
+&-item{
+	margin-bottom:20px;
+    }
+
+&-bold{
+	margin-right: 15px;
+	}
+
+&-block{
+	margin-bottom: 20px;
+    }
+
+&-button{
+	border: 3px solid #000;
+	box-sizing: border-box;
+	background-color: #fff;
+	border-radius:30px;
+	cursor:pointer;
+    }
+
+&-text{
+	font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    padding: 9px;
+    text-align: center;
+    }
+
+ }
+ 
+
+}
+
